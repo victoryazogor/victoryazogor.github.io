@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Victory Azogor | Architect, Cinematographer, Backend Developer, Writer</title>
+<meta name="description" content="Victory Azogor is an architect, cinematographer, backend developer (Linux) and writer based in Calabar, Nigeria.">
+<meta name="author" content="Victory Azogor">
+<link rel="canonical" href="https://victoryazogor.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://victoryazogor.github.io/">
+<meta property="og:title" content="Victory Azogor">
+<meta property="og:description" content="Architect, cinematographer, backend developer (Linux) and writer based in Calabar, Nigeria.">
+<meta property="og:image" content="photo.jpg">
+<meta name="color-scheme" content="light">
+
+<!-- Helps Google connect this page to your other profiles.
+     Links your page to your other profiles. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Victory Azogor",
+  "url": "https://victoryazogor.github.io/",
+  "jobTitle": "Architect, Cinematographer, Backend Developer, Writer",
+  "image": "photo.jpg",
+  "homeLocation": { "@type": "Place", "name": "Calabar, Nigeria" },
+  "alumniOf": "University of Cross River State",
+  "sameAs": [
+    "https://www.linkedin.com/in/victory-azogor",
+    "https://www.youtube.com/@Nav_studios",
+    "https://www.tiktok.com/@Navi_azogor",
+    "https://selar.com/m/victory-azogor",
+    "https://substack.com/@victoryazogor",
+    "https://linktr.ee/victoryazogor"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper: #E9EEF0;
+    --ink: #14232B;
+    --river: #1F6F78;
+    --signal: #E6B422;
+    --muted: #4A5C63;
+    --rule: #14232B;
+    --display: "Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+    --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+  a { color: var(--river); text-underline-offset: 3px; }
+  a:hover { color: var(--ink); }
+  a:focus-visible, .links a:focus-visible {
+    outline: 3px solid var(--signal);
+    outline-offset: 3px;
+  }
+
+  .sheet {
+    max-width: 62rem;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 3rem;
+  }
+
+  /* Hero */
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(3.2rem, 15vw, 8.5rem);
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+    margin: 1rem 0 1.75rem;
+  }
+  .hero .lead {
+    font-size: 1.25rem;
+    max-width: 34rem;
+    margin: 0 0 2rem;
+  }
+
+  /* Title block, as on an architectural drawing sheet */
+  .titleblock {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 2px solid var(--rule);
+    background: #F6F9FA;
+  }
+  .titleblock .photo {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    background: var(--river);
+    border-bottom: 2px solid var(--rule);
+    overflow: hidden;
+  }
+  .titleblock .photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 15%;
+  }
+  .titleblock .photo .initials {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 6rem;
+    color: var(--signal);
+  }
+  .titleblock dl { margin: 0; }
+  .titleblock .row {
+    display: grid;
+    grid-template-columns: 7.5rem 1fr;
+    border-bottom: 1px solid var(--rule);
+  }
+  .titleblock .row:last-child { border-bottom: 0; }
+  .titleblock dt, .titleblock dd { margin: 0; padding: 0.7rem 0.9rem; }
+  .titleblock dt {
+    color: var(--muted);
+    font-size: 0.9rem;
+    border-right: 1px solid var(--rule);
+  }
+  .titleblock dd { font-weight: 500; }
+
+  /* Sections */
+  section { margin-top: 4rem; }
+  h2 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 1.9rem;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin: 0 0 1.25rem;
+    padding-top: 0.9rem;
+    border-top: 6px solid var(--signal);
+  }
+  .about p { max-width: 38rem; margin: 0 0 1rem; }
+
+  /* Disciplines laid out like a drawing schedule */
+  .schedule { border: 2px solid var(--rule); background: #F6F9FA; }
+  .schedule .item {
+    padding: 1.1rem 1rem 1.2rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .schedule .item:last-child { border-bottom: 0; }
+  .schedule h3 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0 0 0.3rem;
+  }
+  .schedule p { margin: 0; max-width: 36rem; }
+
+  /* Links */
+  .links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 2px solid var(--rule);
+    background: #F6F9FA;
+  }
+  .links li { border-bottom: 1px solid var(--rule); }
+  .links li:last-child { border-bottom: 0; }
+  .links a {
+    display: block;
+    padding: 0.95rem 1rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .links a:hover { background: var(--ink); color: var(--paper); }
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  @media (min-width: 48rem) {
+    .sheet { padding: 3.5rem 2rem 4rem; }
+    .titleblock { grid-template-columns: 16rem 1fr; }
+    .titleblock .photo {
+      aspect-ratio: auto;
+      min-height: 100%;
+      border-bottom: 0;
+      border-right: 2px solid var(--rule);
+    }
+    .titleblock .row { grid-template-columns: 9rem 1fr; }
+    .schedule .item {
+      display: grid;
+      grid-template-columns: 14rem 1fr;
+      gap: 1.5rem;
+      align-items: baseline;
+    }
+    .schedule h3 { margin: 0; }
+    .links { display: grid; grid-template-columns: 1fr 1fr; }
+    .links li:nth-child(odd) { border-right: 1px solid var(--rule); }
+    .links li:last-child:nth-child(odd) { grid-column: 1 / -1; border-right: 0; }
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+
+  <header class="hero">
+    <h1>Victory Azogor</h1>
+    <p class="lead">Architect, cinematographer, backend developer and writer, based in Calabar, Nigeria.</p>
+
+    <div class="titleblock">
+      <div class="photo">
+        <span class="initials" aria-hidden="true">VA</span>
+        <img src="photo.jpg" alt="Victory Azogor, architect and cinematographer in Calabar, Nigeria" onerror="this.remove()">
+      </div>
+      <dl>
+        <div class="row"><dt>Name</dt><dd>Victory Azogor</dd></div>
+        <div class="row"><dt>Work</dt><dd>Architecture, cinematography, backend development, writing</dd></div>
+        <div class="row"><dt>Based in</dt><dd>Calabar, Nigeria</dd></div>
+        <div class="row"><dt>Education</dt><dd>BTech Architecture, University of Cross River State</dd></div>
+        <div class="row"><dt>Open to</dt><dd>Freelance projects and creative collaborations</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <section class="about" aria-labelledby="about-h">
+    <h2 id="about-h">About</h2>
+    <p>I'm Victory Azogor, an architect and multidisciplinary creative in Calabar. I trained in Architecture and worked as Site Architect/Manager at Hillsmasters, a construction company, taking projects from design to site.</p>
+    <p>Alongside architecture, I shoot and edit video, build backend and web projects on Linux, and write screenplays and fiction rooted in Nigerian life.</p>
+  </section>
+
+  <section aria-labelledby="work-h">
+    <h2 id="work-h">What I do</h2>
+    <div class="schedule">
+      <div class="item">
+        <h3>Architecture</h3>
+        <p>BTech in Architecture from the University of Cross River State. Site Architect/Manager at Hillsmasters, 2024 to 2025.</p>
+      </div>
+      <div class="item">
+        <h3>Cinematography</h3>
+        <p>Shooting and editing video, with sound engineering. Moving into video production and filmmaking.</p>
+      </div>
+      <div class="item">
+        <h3>Backend and Linux</h3>
+        <p>Linux system administration, working toward RHCSA certification, and web projects built for brands.</p>
+      </div>
+      <div class="item">
+        <h3>Writing</h3>
+        <p>Screenplays and literary fiction set in Nigeria, drawing on Igbo and Urhobo traditions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="links-h">
+    <h2 id="links-h">Find me online</h2>
+    <ul class="links">
+      <li><a rel="me" href="https://www.linkedin.com/in/victory-azogor">LinkedIn</a></li>
+      <li><a rel="me" href="https://www.youtube.com/@Nav_studios">YouTube</a></li>
+      <li><a rel="me" href="https://www.tiktok.com/@Navi_azogor">TikTok</a></li>
+      <li><a rel="me" href="https://selar.com/m/victory-azogor">Selar</a></li>
+      <li><a rel="me" href="https://substack.com/@victoryazogor">Substack</a></li>
+      <li><a rel="me" href="https://linktr.ee/victoryazogor">Linktree</a></li>
+      <li><a rel="me" href="mailto:victoryazogor058@gmail.com">victoryazogor058@gmail.com</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Victory Azogor, Calabar, Nigeria.</p>
+  </footer>
+
+</main>
+</body>
+</html>
