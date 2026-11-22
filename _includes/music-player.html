@@ -1,0 +1,8 @@
+<section class="music-player" aria-label="Poetry background music">
+  <div class="music-meta"><span class="music-dot"></span><div><strong>Reading soundtrack</strong><small>Instrumental · Poetry collection</small></div></div>
+  <button class="music-play" type="button" data-audio-toggle aria-label="Play background music">▶</button>
+  <div class="music-progress"><span data-audio-time>00:00</span><input data-audio-seek type="range" min="0" max="100" value="0" aria-label="Seek audio"><span data-audio-duration>00:00</span></div>
+  <label class="volume-control" aria-label="Volume"><span>VOL</span><input data-audio-volume type="range" min="0" max="1" step="0.05" value="0.45"></label>
+  <audio data-poetry-audio preload="metadata" loop src="{{ '/assets/audio/poetry-soundtrack.mp3' | relative_url }}"></audio>
+  <p class="audio-note">Press play to listen while you read. Add your soundtrack as <code>poetry-soundtrack.mp3</code> in <code>assets/audio/</code>.</p>
+</section>
