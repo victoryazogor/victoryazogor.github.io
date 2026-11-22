@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<article class="poem-page wrap">
+  <a class="back-link" href="{{ '/poems/' | relative_url }}">← All poems</a>
+  <p class="eyebrow">POETRY / {{ page.date | date: "%B %d, %Y" }}</p>
+  <h1 class="poem-title">{{ page.title }}</h1>
+  {% if page.excerpt %}<p class="poem-excerpt">{{ page.excerpt }}</p>{% endif %}
+  <div class="poem-content">{{ content }}</div>
+  <div class="poem-end">— V.A.</div>
+  {% include music-player.html %}
+  <nav class="poem-pagination">
+    {% assign poems = site.poems | sort: "date" %}
+    {% for poem in poems %}
+      {% if poem.url == page.url %}
+        {% assign prev_index = forloop.index0 | minus: 1 %}
+        {% assign next_index = forloop.index0 | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if prev_index >= 0 %}<a href="{{ poems[prev_index].url | relative_url }}">← Previous poem</a>{% endif %}
+    {% if next_index < poems.size %}<a href="{{ poems[next_index].url | relative_url }}">Next poem →</a>{% endif %}
+  </nav>
+</article>

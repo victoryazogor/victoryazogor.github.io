@@ -1,0 +1,20 @@
+title: "Victory Azogor"
+description: "Architecture, film, technology and words."
+url: "https://victoryazogor.github.io"
+baseurl: ""
+markdown: kramdown
+permalink: /poems/:title/
+collections:
+  poems:
+    output: true
+    permalink: /poems/:name/
+defaults:
+  - scope:
+      path: ""
+      type: poems
+    values:
+      layout: poem
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
