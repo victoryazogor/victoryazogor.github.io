@@ -7,7 +7,7 @@ layout: default
   <div class="hero-intro"><p>I move between <em>spaces, stories and systems</em> — shaping ideas into things people can experience.</p><small>A multidisciplinary creative working across the built environment, moving image, digital technology and writing.</small></div>
   <figure class="hero-image"><img src="{{ '/assets/images/hero-studio.png' | relative_url }}" alt="Victory Azogor in four creative looks"><figcaption><span>One person. Many ways to make.</span><span>Cross River, NG</span></figcaption></figure>
 </div>
-<div class="ticker" aria-label="Love Create Inspire"><div class="ticker-track">{% for i in (1..2) %}<span>LOVE <b>✳</b> CREATE <b>✳</b> INSPIRE <b>✳</b></span>{% endfor %}</div></div>
+<div class="ticker" aria-label="Love Create Inspire"><div class="ticker-track">{% for i in (1..10) %}<span>LOVE <b>✳</b> CREATE <b>✳</b> INSPIRE <b>✳</b></span>{% endfor %}</div></div>
 <section id="about" class="wrap section">
   <p class="eyebrow">01 / THE PERSON</p><h2>Curious by nature.<br><em>Driven to make.</em></h2>
   <div class="about-grid"><img class="portrait" src="{{ '/assets/images/victory-portrait.png' | relative_url }}" alt="Portrait of Victory Azogor"><div><p class="big-quote">“I have never been interested in staying inside <em>one box.</em>”</p><p>I'm Victory Azogor, a multidisciplinary creative based in Calabar, Nigeria. My background in architecture taught me to think in structure, detail and human experience. That same curiosity moves through filmmaking, technology and writing.</p><p>I've worked in construction as a site architect and manager while developing my practice in cinematography, video production, Linux and web development, screenwriting and literary work.</p></div></div>
