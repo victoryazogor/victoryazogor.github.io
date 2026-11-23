@@ -12,6 +12,14 @@ layout: default
   <div class="poem-content">{{ content }}</div>
   <div class="poem-end">— V.A.</div>
   <nav class="poem-pagination">
-    ... (leave this part exactly as it is)
+    {% assign poems = site.poems | sort: "date" %}
+    {% for poem in poems %}
+      {% if poem.url == page.url %}
+        {% assign prev_index = forloop.index0 | minus: 1 %}
+        {% assign next_index = forloop.index0 | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if prev_index >= 0 %}<a href="{{ poems[prev_index].url | relative_url }}">← Previous poem</a>{% endif %}
+    {% if next_index < poems.size %}<a href="{{ poems[next_index].url | relative_url }}">Next poem →</a>{% endif %}
   </nav>
 </article>
