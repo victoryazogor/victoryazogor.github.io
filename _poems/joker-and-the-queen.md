@@ -3,6 +3,7 @@ layout: poem
 title: "Joker and the Queen"
 date: 2026-11-22
 category: Poetry
+soundtrack: poetry-soundtrack.mp3
 excerpt: "I'd rather lie next to you and draw lines brighter than latitudes."
 ---
 
