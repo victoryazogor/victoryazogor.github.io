@@ -1,0 +1,11 @@
+<audio id="bgm" src="{{ '/assets/YOUR-AUDIO.mp3' | relative_url }}" loop></audio>
+<button id="playBtn" aria-label="Play music">▶</button>
+<script>
+(function(){
+  var a=document.getElementById('bgm'), b=document.getElementById('playBtn');
+  b.onclick=function(){
+    if(a.paused){a.play();b.textContent='❚❚';}
+    else{a.pause();b.textContent='▶';}
+  };
+})();
+  </script>
