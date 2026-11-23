@@ -13,3 +13,14 @@
 @media(max-width:700px){.wrap{width:calc(100% - 34px)}.header{height:68px}.menu-toggle{display:block}.nav{display:none;position:absolute;z-index:5;top:68px;left:17px;right:17px;background:#182326;border:1px solid var(--line);padding:18px;flex-direction:column;align-items:stretch;gap:18px}.nav.open{display:flex}.nav-cta{text-align:center}.home-hero{padding-top:44px}.hero-kicker{flex-direction:column}.home-hero h1{font-size:clamp(65px,18vw,105px)}.hero-intro{grid-template-columns:1fr;gap:12px}.hero-image img{aspect-ratio:4/5}.section{padding:65px 0}.about-grid{grid-template-columns:1fr;gap:30px}.portrait{max-width:280px;margin:auto}.practice-grid{grid-template-columns:1fr}.connect{align-items:flex-start;flex-direction:column;padding:25px}.footer{flex-direction:column}.listing-head{padding-top:50px}.poem-content{font-size:18px}.music-player{padding:13px}}
 .poem-topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
 #playBtn{width:36px;height:36px;border-radius:50%;border:none;background:#d4e08f;color:#0f1719;font-size:14px;cursor:pointer}
+.ticker{overflow:hidden !important}
+.ticker-track{
+  display:flex !important;
+  width:max-content !important;
+  animation:va-scroll-left 30s linear infinite !important;
+}
+.ticker-track span{flex:none;white-space:nowrap}
+@keyframes va-scroll-left{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
