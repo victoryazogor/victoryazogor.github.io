@@ -1,4 +1,5 @@
-<audio id="bgm" src="{{ '/assets/YOUR-AUDIO.mp3' | relative_url }}" loop></audio>
+{% assign track = page.soundtrack | default: 'poetry-soundtrack.mp3' %}
+<audio id="bgm" src="{{ '/assets/audio/' | append: track | relative_url }}" loop></audio>
 <button id="playBtn" aria-label="Play music">▶</button>
 <script>
 (function(){
@@ -8,4 +9,4 @@
     else{a.pause();b.textContent='▶';}
   };
 })();
-  </script>
+</script>
