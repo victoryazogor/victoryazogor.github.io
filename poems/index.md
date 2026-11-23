@@ -3,7 +3,7 @@ layout: default
 title: Poems
 permalink: /poems/
 ---
-<section class="wrap listing-head"><p class="eyebrow">THE WRITING ROOM / 01</p><h1>Poems &<br><em>other feelings.</em></h1><p class="listing-intro">Words gathered from memory, tenderness, questions and the ordinary business of being human.</p>{% include music-player.html %}</section>
+<section class="wrap listing-head"><p class="eyebrow">THE WRITING ROOM / 01</p><h1>Poems &<br><em>other feelings.</em></h1><p class="listing-intro">Words gathered from memory, tenderness, questions and the ordinary business of being human.</p></section>
 <section class="wrap poem-list">
 {% assign poems = site.poems | sort: "date" | reverse %}
 {% for poem in poems %}
