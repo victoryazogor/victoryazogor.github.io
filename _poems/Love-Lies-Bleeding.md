@@ -3,7 +3,7 @@ layout: poem
 title: "Love Lies Bleeding"
 date: 2026-11-25
 category: Poetry
-Soundtrack: ps4.mp3
+soundtrack: ps4.mp3
 excerpt: "Love and hurt became synonyms the moment..."
 ---
 
