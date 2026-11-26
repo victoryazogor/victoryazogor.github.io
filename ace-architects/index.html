@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ace Architects | Architecture, Engineering & Construction</title>
+<meta name="description" content="Ace Architects provides architectural design, structural engineering, construction and project management services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --orange:#ff6a13; --ink:#1a1a1a; --ink2:#2a2a2a; --paper:#fafafa; --white:#fff; --muted:#6b6b6b;
+  --font:'Montserrat',Arial,sans-serif; --head:'Poppins','Montserrat',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--font);color:var(--ink);background:var(--white);line-height:1.7;font-size:15px}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--head);line-height:1.2}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+
+/* top bar */
+.topbar{background:var(--ink2);color:#aaa;font-size:12px;padding:8px 0}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.topbar b{color:#fff}
+
+/* header */
+.head{background:var(--white);padding:16px 0}
+.head .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--head);font-weight:700;font-size:22px;line-height:1}
+.logo-mark{width:42px;height:42px;background:var(--orange);color:#fff;display:grid;place-items:center;font-size:24px}
+.logo small{display:block;font-size:10px;font-weight:500;color:var(--muted);letter-spacing:.14em;margin-top:4px}
+.contacts{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.contacts div{font-size:14px}
+.contacts span{display:block;font-size:10px;color:var(--muted)}
+.btn{display:inline-block;font-family:var(--head);font-weight:600;font-size:12px;padding:12px 22px;border:2px solid var(--orange);background:transparent;color:var(--ink);cursor:pointer}
+.btn:hover{background:var(--orange);color:#fff}
+.btn.dark{background:var(--ink);border-color:var(--ink);color:#fff}
+.btn.dark:hover{background:var(--orange);border-color:var(--orange)}
+.btn.solid{background:var(--orange);border-color:var(--orange);color:#fff}
+.btn.solid:hover{background:var(--ink);border-color:var(--ink)}
+
+/* nav */
+nav{background:var(--orange);position:sticky;top:0;z-index:20}
+nav .wrap{display:flex;gap:26px;overflow-x:auto}
+nav a{color:#fff;font-size:12px;font-weight:600;padding:14px 0;white-space:nowrap}
+nav a:hover{text-decoration:underline;text-underline-offset:5px}
+
+/* hero */
+.hero{position:relative;min-height:440px;display:flex;align-items:center;
+  background:linear-gradient(135deg,#9db7cf,#d9e4ee 55%,#b8c7a8);background-size:cover;background-position:center}
+.hero-card{background:rgba(255,255,255,.95);padding:32px 32px 36px;max-width:460px;margin-left:calc((100vw - min(1140px,100vw))/2);}
+.hero-card h1{font-size:clamp(28px,4vw,40px);margin-bottom:12px}
+.hero-card p{color:var(--muted);margin-bottom:20px}
+@media(max-width:700px){.hero-card{margin-left:0;max-width:85%}}
+
+/* feature row */
+.feats{padding:56px 0}
+.feats .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;text-align:center}
+.feats svg{width:44px;height:44px;stroke:var(--orange);fill:none;stroke-width:1.6;margin:0 auto 12px}
+.feats h3{font-size:14px;margin-bottom:6px}
+.feats p{font-size:13px;color:var(--muted)}
+
+/* section heads */
+.sec{padding:64px 0}
+.sec.alt{background:var(--paper)}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 40px}
+.sec-head h2{font-size:26px;margin-bottom:12px}
+.sec-head p{color:var(--muted)}
+
+/* service cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.08);display:flex;flex-direction:column}
+.card .ph{height:150px;background:linear-gradient(135deg,#8aa4bb,#cfd9e3);background-size:cover;background-position:center}
+.card div.b{padding:20px;text-align:center}
+.card h3{font-size:15px;margin-bottom:8px}
+.card p{font-size:13px;color:var(--muted)}
+.center{text-align:center;margin-top:36px}
+
+/* why */
+.why .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
+.why .ph{aspect-ratio:3/4;max-height:520px;width:100%;background:linear-gradient(160deg,#b9c6d4,#e6ebf0);background-size:cover;background-position:center;border:12px solid #fff;box-shadow:0 0 0 1px #e5e5e5}
+.why h2{font-size:26px;margin-bottom:18px}
+.why p{color:var(--muted);font-size:13px;margin-bottom:16px}
+@media(max-width:780px){.why .wrap{grid-template-columns:1fr}}
+
+/* portfolio */
+.port{background:var(--ink);color:#fff;text-align:center;padding:56px 0 72px}
+.port .sec-head p{color:#aaa}
+.port svg{width:46px;height:46px;stroke:#ddd;fill:none;stroke-width:1.4;margin:0 auto 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.grid .ph{aspect-ratio:4/3;background:linear-gradient(135deg,#566a7e,#8ea0b2);background-size:cover;background-position:center;display:flex;align-items:flex-end;text-align:left}
+.grid .ph span{width:100%;padding:10px 14px;font-size:12px;background:linear-gradient(transparent,rgba(0,0,0,.75))}
+
+/* cta */
+.cta{background:var(--orange);padding:36px 0}
+.cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta h2{font-size:20px;margin-bottom:6px}
+.cta p{max-width:620px;font-size:14px}
+
+/* how we work */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:24px;counter-reset:s}
+.step{padding:22px;background:#fff;border-top:3px solid var(--orange);box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.step h3{font-size:15px;margin-bottom:6px}
+.step h3::before{counter-increment:s;content:counter(s) ". "}
+.step p{font-size:13px;color:var(--muted)}
+
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.contact form{display:grid;gap:12px}
+.contact input,.contact textarea{font:inherit;padding:12px;border:1px solid #d5d5d5;width:100%;background:#fff}
+.contact textarea{min-height:120px;resize:vertical}
+.contact h2{font-size:24px;margin-bottom:14px}
+.contact p{color:var(--muted);margin-bottom:10px}
+@media(max-width:780px){.contact .wrap{grid-template-columns:1fr}}
+
+/* footer */
+footer{background:var(--ink);color:#fff;padding:36px 0 28px}
+footer .logo-mark{width:38px;height:38px}
+.copy{background:#111;color:#999;font-size:12px;padding:16px 0}
+.copy b{color:#fff}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Architecture, Engineering and Construction.</span>
+  <span>Mon to Sat &middot; <b>09:00 to 17:00</b></span>
+</div></div>
+
+<header class="head"><div class="wrap">
+  <a href="#home" class="logo" aria-label="Ace Architects home">
+    <span class="logo-mark">A</span>
+    <span>Ace Architects<small>DESIGN &middot; BUILD &middot; DELIVER</small></span>
+  </a>
+  <div class="contacts">
+    <div><span>Call line</span>+234 800 000 0000</div>
+    <div><span>Email</span>info@acearchitects.com</div>
+    <a class="btn" href="#contact">GET A QUOTE</a>
+  </div>
+</div></header>
+
+<nav aria-label="Main"><div class="wrap">
+  <a href="#home">HOME</a><a href="#services">SERVICES</a><a href="#projects">PROJECTS</a>
+  <a href="#process">PROCESS</a><a href="#why">ABOUT US</a><a href="#contact">CONTACT</a>
+</div></nav>
+
+<main id="home">
+<!-- HERO: put your photo in images/hero.jpg -->
+<section class="hero" style="background-image:url('images/hero.jpg'),linear-gradient(135deg,#9db7cf,#d9e4ee 55%,#b8c7a8)">
+  <div class="hero-card">
+    <h1>Thoughtful Design,<br>Built to Last</h1>
+    <p>Ace Architects delivers architectural design, engineering and construction services for homes, commercial spaces and developments.</p>
+    <a class="btn solid" href="#services">LEARN MORE</a>
+  </div>
+</section>
+
+<section class="feats"><div class="wrap">
+  <div>
+    <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V18l16-10 16 10v22z"/><path d="M18 40V26h12v14"/></svg>
+    <h3>Architectural Design</h3><p>Concept to detailed drawings for homes and commercial buildings.</p>
+  </div>
+  <div>
+    <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 40h36M10 40V16l14-8 14 8v24M16 24h16M16 32h16"/></svg>
+    <h3>Structural Engineering</h3><p>Safe, efficient structures designed to meet applicable codes.</p>
+  </div>
+  <div>
+    <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 38h32M14 38V22l10-8 10 8v16M20 38V28h8v10"/></svg>
+    <h3>Construction &amp; Management</h3><p>On-site delivery with close supervision, from start to handover.</p>
+  </div>
+</div></section>
+
+<section class="sec alt" id="services"><div class="wrap">
+  <div class="sec-head">
+    <h2>Our Core Services</h2>
+    <p>Ace Architects offers design, engineering and building services in one team, so your project stays coordinated from the first sketch to the final inspection.</p>
+  </div>
+  <div class="cards">
+    <article class="card">
+      <div class="ph" style="background-image:url('images/service-architecture.jpg'),linear-gradient(135deg,#8aa4bb,#cfd9e3)"></div>
+      <div class="b"><h3>Architectural Design</h3><p>Floor plans, elevations, 3D visuals and permit-ready drawings for new builds and remodels.</p></div>
+    </article>
+    <article class="card">
+      <div class="ph" style="background-image:url('images/service-structural.jpg'),linear-gradient(135deg,#8aa4bb,#cfd9e3)"></div>
+      <div class="b"><h3>Structural &amp; MEP Engineering</h3><p>Structural calculations plus electrical and mechanical layouts for safe, working buildings.</p></div>
+    </article>
+    <article class="card">
+      <div class="ph" style="background-image:url('images/service-construction.jpg'),linear-gradient(135deg,#8aa4bb,#cfd9e3)"></div>
+      <div class="b"><h3>Construction &amp; Renovation</h3><p>Residential and commercial building work, extensions and upgrades to existing structures.</p></div>
+    </article>
+    <article class="card">
+      <div class="ph" style="background-image:url('images/service-management.jpg'),linear-gradient(135deg,#8aa4bb,#cfd9e3)"></div>
+      <div class="b"><h3>Project Management</h3><p>Scheduling, cost control and site supervision so work stays on time and on budget.</p></div>
+    </article>
+    <article class="card">
+      <div class="ph" style="background-image:url('images/service-realestate.jpg'),linear-gradient(135deg,#8aa4bb,#cfd9e3)"></div>
+      <div class="b"><h3>Real Estate Development</h3><p>Feasibility, design and delivery for residential, commercial and mixed-use properties.</p></div>
+    </article>
+    <article class="card">
+      <div class="ph" style="background-image:url('images/service-interiors.jpg'),linear-gradient(135deg,#8aa4bb,#cfd9e3)"></div>
+      <div class="b"><h3>Interior &amp; Space Planning</h3><p>Layouts, finishes and detailing that make good use of every room.</p></div>
+    </article>
+  </div>
+  <div class="center"><a class="btn dark" href="#contact">DISCUSS A SERVICE</a></div>
+</div></section>
+
+<section class="sec why" id="why"><div class="wrap">
+  <div class="ph" style="background-image:url('images/about.jpg'),linear-gradient(160deg,#b9c6d4,#e6ebf0)" role="img" aria-label="Ace Architects team member on site"></div>
+  <div>
+    <h2>Why Choose Ace Architects</h2>
+    <p>We start every job by listening. Your goals, site and budget shape the design, and the design shapes the build, so there are no surprises later.</p>
+    <p>Architects, engineers and site supervisors work as one team. That means drawings that can actually be built and a builder who understands the drawings.</p>
+    <p>You get clear updates at each stage, honest cost advice and workmanship we are happy to put our name on.</p>
+  </div>
+</div></section>
+
+<section class="port" id="projects"><div class="wrap">
+  <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 34h32M10 34c0-9 6-16 14-16s14 7 14 16M24 14v4M20 34v-8h8v8"/></svg>
+  <div class="sec-head"><h2>Project Portfolio</h2>
+    <p>A selection of residential, commercial and industrial work from concept through completion.</p></div>
+  <div class="grid">
+    <div class="ph" style="background-image:url('images/project-1.jpg'),linear-gradient(135deg,#566a7e,#8ea0b2)"><span>Two-storey residence</span></div>
+    <div class="ph" style="background-image:url('images/project-2.jpg'),linear-gradient(135deg,#566a7e,#8ea0b2)"><span>Commercial shed</span></div>
+    <div class="ph" style="background-image:url('images/project-3.jpg'),linear-gradient(135deg,#566a7e,#8ea0b2)"><span>Warehouse structure</span></div>
+    <div class="ph" style="background-image:url('images/project-4.jpg'),linear-gradient(135deg,#566a7e,#8ea0b2)"><span>Industrial complex</span></div>
+    <div class="ph" style="background-image:url('images/project-5.jpg'),linear-gradient(135deg,#566a7e,#8ea0b2)"><span>Interior fit-out</span></div>
+    <div class="ph" style="background-image:url('images/project-6.jpg'),linear-gradient(135deg,#566a7e,#8ea0b2)"><span>Modern duplex</span></div>
+  </div>
+</div></section>
+
+<section class="cta"><div class="wrap">
+  <div><h2>Ready to Start Your Project?</h2>
+  <p>Tell us what you want to build. We will review your details and get back with a clear plan.</p></div>
+  <a class="btn dark" href="#contact">GET A QUOTE</a>
+</div></section>
+
+<section class="sec alt" id="process"><div class="wrap">
+  <div class="sec-head"><h2>How We Work</h2>
+    <p>Four stages, each with a clear result you can review before we move on.</p></div>
+  <div class="steps">
+    <div class="step"><h3>Consultation</h3><p>We review your idea, site, budget and timeline.</p></div>
+    <div class="step"><h3>Design</h3><p>Drawings and engineering are developed and refined with your feedback.</p></div>
+    <div class="step"><h3>Approval</h3><p>Final plans, costs and permits are agreed before work begins.</p></div>
+    <div class="step"><h3>Build &amp; Handover</h3><p>Supervised construction, final inspection and handover.</p></div>
+  </div>
+</div></section>
+
+<section class="sec contact" id="contact"><div class="wrap">
+  <div>
+    <h2>Request a Quote</h2>
+    <p>Share a few details about your project and we will reply within two working days.</p>
+    <p><b>Call:</b> +234 800 000 0000</p>
+    <p><b>Email:</b> info@acearchitects.com</p>
+    <p><b>Hours:</b> Mon to Sat, 09:00 to 17:00</p>
+  </div>
+  <!-- Replace the action with your Formspree / Getform URL so submissions reach your inbox -->
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input name="name" placeholder="Full name" required aria-label="Full name">
+    <input name="email" type="email" placeholder="Email address" required aria-label="Email address">
+    <input name="phone" placeholder="Phone number" aria-label="Phone number">
+    <textarea name="message" placeholder="Project type, location, budget and timeline" required aria-label="Project details"></textarea>
+    <button class="btn solid" type="submit">SEND REQUEST</button>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <a href="#home" class="logo"><span class="logo-mark">A</span><span>Ace Architects</span></a>
+</div></footer>
+<div class="copy"><div class="wrap">&copy; 2026 <b>Ace Architects</b>. All Rights Reserved.</div></div>
+
+</body>
+</html>
